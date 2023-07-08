@@ -21,20 +21,9 @@ func main() {
 	}
 
 
-	storaeInvoiceHeader := storage.NewPsqlInvoiceHeader(storage.Pool())
-	serviceInvoiceHeader := invoiceheader.NewService(storaeInvoiceHeader)
+	
 
-	if err := serviceInvoiceHeader.Migrate(); err != nil{
-		log.Fatal(err)
-	}
-
-	storaeInvoiceItem := storage.NewPsqlInvoiceItem(storage.Pool())
-	serviceInvoiceItem := invoiitem.NewService(storaeInvoiceItem)
-
-	if err := serviceInvoiceItem.Migrate(); err != nil{
-		log.Fatal(err)
-	}
-
+	
 
 }
 
