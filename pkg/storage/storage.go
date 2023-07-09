@@ -16,7 +16,7 @@ var (
 func NewPostgresDB(){
 	once.Do(func() {
 		var err error
-		db, err = sql.Open("postgres","postgres://postgres:rivera220@localhost/facturas?sslmode=disable")
+		db, err = sql.Open("postgres","postgres://user:password@localhost/dbname?sslmode=disable")
 
 		if err != nil{
 			log.Fatalf("Algo salio mal %v",err)
